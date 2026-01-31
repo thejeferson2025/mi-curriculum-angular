@@ -1,0 +1,78 @@
+<div class="cv-container">
+  <header class="cv-header">
+    <div class="header-info">
+      <h1>{{ cv.name }}</h1>
+      <h2>{{ cv.title }}</h2>
+      <div class="contact-info">
+        <span>{{ cv.contact.email }}</span> |
+        <span>{{ cv.contact.phone }}</span> |
+        <a [href]="'https://' + cv.contact.linkedin" target="_blank">LinkedIn</a> |
+        <a [href]="'https://' + cv.contact.github" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <img src="https://sga.ube.edu.ec/ube/media/fotosp/2025/07/08/WhatsApp_Image_2025-07-08_at_8.45.15_PM.png" alt="Foto de perfil de {{ cv.name }}" class="profile-photo">
+  </header>
+
+  <main>
+    <section class="section">
+      <h3>Perfil Profesional</h3>
+      <p>{{ cv.summary }}</p>
+    </section>
+
+    <section class="section">
+      <h3>Experiencia Laboral</h3>
+      @for (job of cv.experience; track job.company) {
+        <div class="job-item">
+          <div class="job-header">
+            <h4>{{ job.role }} <span class="at">en</span> {{ job.company }}</h4>
+            <span class="period">{{ job.period }}</span>
+          </div>
+          <ul>
+            @for (desc of job.description; track desc) {
+              <li>{{ desc }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </section>
+
+    <section class="section">
+      <h3>Educación Superior</h3>
+      @for (education of cv.education; track education.institute) {
+        <div class="job-item">
+          <div class="job-header">
+            <h4>{{ education.role }}</h4>
+            <span class="degree">{{ education.institute}}</span>
+            <span class="period">{{ education.period }}</span>
+          </div>
+          <ul>
+            @for (desc of education.description; track desc) {
+              <li>{{ desc }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </section>
+
+
+
+
+    <section class="section">
+      <h3>Habilidades Técnicas</h3>
+      <div class="skills-grid">
+        @for (skillGroup of cv.skills; track skillGroup.category) {
+          <div class="skill-card">
+            <strong>{{ skillGroup.category }}</strong>
+            <div class="tags">
+              @for (tech of skillGroup.technologies; track tech) {
+                <span class="tag">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </main>
+</div>
+
+

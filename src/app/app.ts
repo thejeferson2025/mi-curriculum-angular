@@ -1,12 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+// Importamos tus datos
+import { CV_DATA } from './data/cv-data'; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  standalone: true,
+  imports: [CommonModule], 
+  templateUrl: './app.component.html', 
+  styleUrls: ['./app.component.scss']  
 })
 export class App {
-  protected readonly title = signal('curriculum');
+  
+  cv = CV_DATA; 
 }
