@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           
-          path: ./dist/curriculum
+          path: ./dist/curriculum/browser
 
       - name: Desplegar a GitHub Pages
         id: deployment
