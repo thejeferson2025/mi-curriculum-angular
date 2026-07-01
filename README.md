@@ -9,11 +9,6 @@ To start a local development server, run:
 ```bash
 ng serve -o
 ```
-start deploy a github pages server
 
-```bash
-npx ng build --base-href=/mi-curriculum-angular/
-npx angular-cli-ghpages --dir=dist/curriculum/browser
-```
 
 
