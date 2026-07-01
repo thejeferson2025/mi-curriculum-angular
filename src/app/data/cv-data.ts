@@ -1,9 +1,9 @@
 import { Resume } from '../models/resume.interface';
 
 export const CV_DATA: Resume = {
-  name: "Jeferson Vinicion Tapia Aguirre",
+  name: "Jeferson Vinicio Tapia Aguirre",
   title: "Desarrollador Full Stack",
-  summary: "Desarrollador de Software con más de 3 años de experiencia especializado en la creación de soluciones eficientes y escalables. Enfocado en la resolución de problemas complejos mediante lógica avanzada y arquitectura de software limpia. Comprometido con la excelencia técnica y la entrega de productos digitales de alto impacto que aportan valor real al negocio. ",
+  summary: "Desarrollador de Software Full-Stack con más de 3 años de trayectoria en el ciclo completo de desarrollo de aplicaciones. Experto en resolver retos técnicos complejos mediante lógica estructurada, escalabilidad de sistemas y código mantenible. Orientado a la innovación constante, la optimización de procesos y la entrega continua de valor tecnológico.",
   contact: {
     email: "jefersontapia3a@gmail.com",
     phone: "+593 963229629",
@@ -12,9 +12,19 @@ export const CV_DATA: Resume = {
   },
   experience: [
     {
+      role: "Ingeniero de Software",
+      company: "Netby IT Consulting",
+      period: "2026 - Actualidad",
+      description: [
+        "Análisis y desarrollo de software a nivel de backend y frontend.",
+        "Realizar documentación técnica y control de cambios con las mejores prácticas en proyectos de software desplegados.",
+        "Gestionar los pull request y realizar revisiones de código de los proyectos de software."
+      ]
+    },
+    {
       role: "Analista de Desarrollo",
       company: "Improve-IT",
-      period: "2025 - Actualidad",
+      period: "2025 - 2026",
       description: [
         "Análisis y desarrollo de aplicaciones web del lado backend y fronted requeridas por clientes.",
         "Realizar mejoras y control de cambios con las mejores prácticas a proyectos de software desplegados.",
